@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Sample Category"
+            id="CX_CON_Tools.commands.category">
+      </category>
+      <command
+            name="Item Rename Command"
+            categoryId="CX_CON_Tools.commands.category"
+            id="CX_CON_Tools.commands.itemRenameCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="CX_CON_Tools.commands.itemRenameCommand"
+            class="cx_con_tools.handlers.ItemRenameHandler">
+            <activeWhen>
+                <reference
+                    definitionId="com.teamcenter.rac.ui.inMainPerspective"/>
+            </activeWhen>
+            <enabledWhen>
+                <iterate ifEmpty="false">
+                    <adapt type="com.teamcenter.rac.kernel.TCComponent">
+                        <or>
+                            <test
+                                property="com.teamcenter.rac.kernel.TCComponent.typeClass"
+                                value="Item"/>
+                        </or>
+                    </adapt>
+                </iterate>
+            </enabledWhen>
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="CX_CON_Tools.commands.itemRenameCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="CX_CONTools.toolbars.sampleToolbar">
+            <command
+		            commandId="CX_CON_Tools.commands.itemRenameCommand"
+		            icon="icons/utilityIcon.gif"
+                  	tooltip="Item Rename"
+		            id="CX_CON_Tools.toolbars.itemRenameCommand">
+     		</command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>

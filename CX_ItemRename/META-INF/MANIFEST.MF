@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CX_ItemRename
+Bundle-SymbolicName: CX_ItemRename;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: cx_con_tools.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.teamcenter.rac.kernel;bundle-version="11000.2.0",
+ TcSoaCoreRac;bundle-version="11000.2.0",
+ com.teamcenter.rac.aifrcp;bundle-version="11000.2.0",
+ com.teamcenter.rac.common;bundle-version="11000.2.0",
+ com.teamcenter.rac.util;bundle-version="11000.2.0"
+Bundle-ActivationPolicy: lazy
+Import-Package: com.teamcenter.soa.exceptions
