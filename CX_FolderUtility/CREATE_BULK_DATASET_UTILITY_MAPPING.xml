@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<preferences version="10.0">
+  <category name="General">
+    <category_description></category_description>
+    <preference name="CREATE_BULK_DATASET_UTILITY_MAPPING" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>This preference is used to define the mapping required for the type of file, the dataset type and the dataset reference. For e.g.:
+.txt=Text=Text
+.pdf=PDF=PDF_Reference
+.prt=UGMASTER=UGPART</preference_description>
+      <context name="Teamcenter">
+        <value>.txt=Text=Text</value>
+        <value>.pdf=PDF=PDF_Reference</value>
+        <value>.h=Text=Text</value>
+        <value>.cpp=Text=Text</value>
+        <value>.prt=UGMASTER=UGPART</value>
+      </context>
+    </preference>
+  </category>
+</preferences>

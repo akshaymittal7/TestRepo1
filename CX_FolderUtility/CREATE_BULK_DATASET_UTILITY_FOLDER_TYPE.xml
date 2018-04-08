@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<preferences version="10.0">
+  <category name="General">
+    <category_description></category_description>
+    <preference name="CREATE_BULK_DATASET_UTILITY_FOLDER_TYPE" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>The real name of the folder type that needs to be created when the utility encounters an folder on the system path.</preference_description>
+      <context name="Teamcenter">
+        <value>Folder</value>
+      </context>
+    </preference>
+  </category>
+</preferences>
